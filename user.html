@@ -1,0 +1,175 @@
+<html>
+ <head>
+    
+     
+     <link rel="stylesheet" href="style/main.css">  
+     
+    
+   </head>
+
+   <body>
+       <div class="mainContainer">
+        
+           <div id="header">
+           User Registration Form
+        </div>
+        
+           <div id="middle">
+           
+               <form>
+               
+               <div class="container">
+                   <label for="fname">First Name*</label>
+                   <input type="text" class="inputStyle" placeholder="First Name" maxlength="15" id="fname" oninput="characterOnly(this)"required>
+               </div>
+               
+                <div class="container">
+                   <label for="lname">Last Name*</label>
+                   <input type="text" class="inputStyle" id="lName" placeholder="Last Name" maxlength="15"oninput="characterOnly(this)"required>
+                </div>
+               
+                <div class="container">
+                   <label for="email">Email*</label>
+                   <input type="email" class="inputStyle" id="email" placeholder="Email" maxlength="45" required>
+                </div>
+               
+               <div class="container">
+                   <label for="dob">Date Of Birth</label>
+                   <input type="date" class="inputStyle" id="dob" onclick="">
+                </div>
+                
+                <div class="container">
+                   
+                   <label for="dob">Marital Status</label>
+                   <select class="inputStyle">
+                     <option >--Select Marital--</option>
+                     <option >Married--</option>
+                     <option >Not Married</option>
+                    </select>
+                     
+                 </div>
+               
+                 <div  class="container">
+                
+                     <label for="mno">Mobile Number</label>
+                     <input type="text" id="mno" maxlength="10" class="inputStyle" placeholder="XXXXXXXXXX" oninput="numberOnly(this)">
+            
+                </div>
+               
+                <div  class="container containerAddress">
+                
+                   <label for="address">Residental Address</label>
+                   <textarea class="inputStyle areaStyle" placeholder="Address1" maxlength="150"></textarea>
+            
+                </div>
+               
+               <div  class="container containerAddress">
+                
+                   <label for="coaddress">Correspondence Address</label>
+                   <textarea class="inputStyle areaStyle" placeholder="Address2"maxlength="150"></textarea>
+            
+                </div>
+               
+               <div class="container container2">
+               
+                 <input type="checkbox">
+                 <label for="currentlyWorking">Currently Working</label>
+               
+                 </div>
+               <div class="container container2">
+                   
+                   <label for="gender">Gender</label><br>
+                   <input type="radio"checked class="radioStyle">Male
+                   <input type="radio" class="radioStyle">Female
+                   <input type="radio" class="radioStyle">Other
+                   
+               </div>
+               
+               <div class="container">
+                
+                   <label for="postalCode">Postal Code</label>
+                   <input type="text" class="inputStyle" placeholder="Postal Code" id="postalCode" maxlength="5"oninput="numberOnly(this)">
+               
+                </div>
+               
+               
+               <div class="container">
+                
+                   <label for="city">City</label>
+                   <input type="text" class="inputStyle" id="city" placeholder="City"maxlength="20">
+               
+                </div>
+               
+               
+               <div class="container">
+                
+                   <label for="country">Country</label>
+                   <select class="inputStyle" id="country">
+                       <option value="" selected>--Select Country--</option>
+                       <option vlaue="India">India</option>
+                   </select>
+               
+              </div>
+               
+               <div class="container">
+                
+                   <label for="state">State</label>
+                   <select class="inputStyle" id="state">
+                       <option value="" selected>--Select State--</option>
+                       <option vlaue="uttrakhand">Uttrakhand</option>
+                   </select>
+               
+              </div>
+              
+              <div class="container">
+                
+                   <label for="password">Password</label>
+                   <input type="password" class="inputStyle" id="password" placeholder="Password"maxlength="50">
+               
+                </div>
+               
+               <div class="container">
+                
+                   <label for="repassword">Re-type Password</label>
+                   <input type="password" class="inputStyle" id="repassword" placeholder="Re-type Password"maxlength="50">
+               
+                </div>
+              
+            </form>
+         
+        </div>
+           
+        <div id="bottom">
+            <div class="container">Mandatory Field*</div>
+            <div id="formButton">
+                <button class="btStyling">Create</button>
+               <button class="btStyling reset"
+                       >Reset </button>
+           </div>
+        </div>
+     </div>
+    <script type="text/javascript">
+        
+         let today = new Date().toISOString().slice(0, 10)          
+         document.getElementById("dob").setAttribute("max", today);
+        
+       function characterOnly(input)
+        
+      {
+           
+            var regx=/[^a-z]/gi;
+            input.value=input.value.replace(regx,'');
+            
+        }
+        function numberOnly(input){
+            var regx=/[^+0-9]/gi;
+            input.value=input.value.replace(regx,'');
+        }
+       </script>
+     
+</body>
+
+
+
+
+</html>
